@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy &ndash; Seylo</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a1929; --surface: #0d2137; --surface2: #132f4c;
+      --text: #e3f2fd; --text-muted: #90caf9; --accent: #42a5f5;
+    }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+    header { background: var(--surface); border-bottom: 1px solid var(--surface2); padding: 24px; text-align: center; }
+    header h1 { font-size: 1.75rem; font-weight: 700; color: var(--accent); }
+    header p { margin-top: 6px; color: var(--text-muted); font-size: 0.9rem; }
+    main { max-width: 800px; margin: 0 auto; padding: 48px 24px 72px; }
+    h2 { font-size: 1.2rem; font-weight: 700; color: var(--accent); margin-top: 40px; margin-bottom: 12px; }
+    p { color: var(--text-muted); margin-bottom: 12px; }
+    ul { margin: 8px 0 12px 24px; color: var(--text-muted); }
+    ul li { margin-bottom: 6px; }
+    strong { color: var(--text); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .back-link { display: inline-block; margin-bottom: 32px; font-size: 0.9rem; }
+    footer { border-top: 1px solid var(--surface2); padding: 24px; text-align: center; color: var(--text-muted); font-size: 0.875rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Privacy Policy</h1>
+    <p>Seylo &ndash; Maritime Logbook App &nbsp;|&nbsp; Last updated: April 17, 2026</p>
+  </header>
+  <main>
+    <a class="back-link" href="index.html">&larr; Back to Seylo</a>
+
+    <h2>1. Introduction</h2>
+    <p>This Privacy Policy describes how <strong>Seylo</strong> (&ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;) handles information when you use the Seylo mobile application (&ldquo;App&rdquo;). We are committed to protecting your privacy and being transparent about what data the App uses and why.</p>
+    <p><strong>App name:</strong> Seylo<br /><strong>Developer:</strong> Marcin Sobczy&#324;ski<br /><strong>Contact:</strong> <a href="mailto:contact@seylo.app">contact@seylo.app</a></p>
+
+    <h2>2. Information We Collect</h2>
+    <p>The App collects only the minimum data required to provide its core functionality:</p>
+    <ul>
+      <li><strong>Anonymous user identifier:</strong> When you first open the App, an anonymous account is created automatically. No name, email address, or personal profile is required or stored.</li>
+      <li><strong>GPS / location data:</strong> The App accesses your device&rsquo;s GPS position to look up the nearest aviation weather station (METAR) and to record position in logbook entries. Location data is used in real-time and stored only as part of the logbook entries you create.</li>
+      <li><strong>Logbook entries:</strong> Data you enter yourself &mdash; such as vessel name, crew names, heading, speed, barometer readings, and notes &mdash; is stored locally on your device and optionally synced to a secure cloud backend.</li>
+      <li><strong>Device information:</strong> Basic device metadata (Android version, app version) is used solely for delivering in-app updates and diagnosing compatibility issues. This data is not tied to your identity.</li>
+    </ul>
+    <p>We do <strong>not</strong> collect your name, email address, phone number, payment information, advertising identifiers, or browsing history. We do <strong>not</strong> use analytics or advertising SDKs.</p>
+
+    <h2>3. How We Use Information</h2>
+    <ul>
+      <li>To store and display your logbook entries within the App.</li>
+      <li>To fetch the nearest METAR weather report based on your current GPS position.</li>
+      <li>To sync your logbook data between devices via our cloud backend.</li>
+      <li>To deliver in-app update notifications.</li>
+    </ul>
+
+    <h2>4. Data Sharing</h2>
+    <p>We do not sell, rent, or share your personal data with third parties for marketing or advertising purposes. Data may be processed by the following service providers solely to operate the App:</p>
+    <ul>
+      <li><strong>Supabase</strong> (<a href="https://supabase.com/privacy" target="_blank" rel="noopener">privacy policy</a>) &ndash; cloud database and anonymous authentication. Your logbook data is stored on Supabase-hosted PostgreSQL servers within the EU.</li>
+      <li><strong>NOAA / aviationweather.gov</strong> &ndash; public weather API. The App sends your GPS coordinates to retrieve the nearest METAR report. No user account data is transmitted.</li>
+    </ul>
+
+    <h2>5. Android Permissions</h2>
+    <p>The App requests the following Android permissions:</p>
+    <ul>
+      <li><strong>INTERNET</strong> &ndash; required to sync logbook data and fetch weather reports.</li>
+      <li><strong>ACCESS_FINE_LOCATION / ACCESS_COARSE_LOCATION</strong> &ndash; required to determine your position for METAR lookup and logbook entry recording.</li>
+      <li><strong>ACCESS_BACKGROUND_LOCATION</strong> &ndash; required to record GPS position for automatic hourly watch entries when the screen is off.</li>
+      <li><strong>RECEIVE_BOOT_COMPLETED</strong> &ndash; required to restart the automatic watch timer after the device reboots.</li>
+      <li><strong>WAKE_LOCK</strong> &ndash; required to keep the processor awake long enough to complete background processing.</li>
+      <li><strong>SCHEDULE_EXACT_ALARM / USE_EXACT_ALARM</strong> &ndash; required to schedule precise hourly watch reminders so entries are created at exact times.</li>
+      <li><strong>FOREGROUND_SERVICE / FOREGROUND_SERVICE_DATA_SYNC</strong> &ndash; required on Android 12+ to run a foreground service for background data sync.</li>
+      <li><strong>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</strong> &ndash; required to ensure background alarms are not deferred by manufacturer power managers.</li>
+      <li><strong>WRITE_EXTERNAL_STORAGE / READ_EXTERNAL_STORAGE</strong> (Android 9 and below only) &ndash; required to save exported PDF files to the device.</li>
+    </ul>
+
+    <h2>6. Data Storage and Security</h2>
+    <p>All logbook data is stored locally on your device using an encrypted SQLite database. When an internet connection is available, data is synced to Supabase cloud servers protected by industry-standard TLS encryption in transit and AES-256 encryption at rest.</p>
+    <p>Your anonymous account is secured using Supabase&rsquo;s authentication service. No passwords are stored on our servers.</p>
+
+    <h2>7. User Rights and Data Deletion</h2>
+    <p>Because the App uses anonymous authentication, all data belongs exclusively to you. You can:</p>
+    <ul>
+      <li>Delete all local data by uninstalling the App from your device.</li>
+      <li>Request deletion of all cloud-stored data by contacting us at <a href="mailto:contact@seylo.app">contact@seylo.app</a>.</li>
+    </ul>
+    <p>We will process deletion requests within 30 days.</p>
+
+    <h2>8. Children&rsquo;s Privacy</h2>
+    <p>The App is not directed at children under the age of 13. We do not knowingly collect any information from children under 13. If you believe a child has provided data through the App, please contact us and we will promptly delete it.</p>
+
+    <h2>9. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Any changes will be reflected by updating the &ldquo;Last updated&rdquo; date at the top of this page. We encourage you to review this policy periodically. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+
+    <h2>10. Contact</h2>
+    <p>If you have any questions or concerns about this Privacy Policy, please contact us:<br /><a href="mailto:contact@seylo.app">contact@seylo.app</a></p>
+  </main>
+  <footer>
+    <p>&copy; 2026 Seylo. All rights reserved.</p>
+    <p style="margin-top:8px;"><a href="index.html">&larr; Back to Seylo</a></p>
+  </footer>
+</body>
+</html>
