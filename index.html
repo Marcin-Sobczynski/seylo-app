@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seylo – Maritime Logbook App</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #1565C0;
+      --bg: #0a1929;
+      --surface: #0d2137;
+      --surface2: #132f4c;
+      --text: #e3f2fd;
+      --text-muted: #90caf9;
+      --accent: #42a5f5;
+    }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    header { background: linear-gradient(135deg, var(--bg) 0%, var(--primary) 100%); padding: 80px 24px 96px; text-align: center; }
+    header h1 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 700; color: #fff; }
+    header p.tagline { margin-top: 16px; font-size: clamp(1rem, 2.5vw, 1.25rem); color: var(--text-muted); max-width: 600px; margin-left: auto; margin-right: auto; }
+    .cta { display: inline-block; margin-top: 36px; padding: 14px 36px; background: var(--accent); color: #0a1929; font-weight: 700; font-size: 1rem; border-radius: 8px; text-decoration: none; transition: background 0.2s; }
+    .cta:hover { background: #90caf9; }
+    .features { max-width: 1100px; margin: 0 auto; padding: 72px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px; }
+    .feature-card { background: var(--surface); border: 1px solid var(--surface2); border-radius: 12px; padding: 32px 28px; }
+    .feature-card .icon { font-size: 2rem; margin-bottom: 16px; }
+    .feature-card h3 { font-size: 1.1rem; font-weight: 600; color: var(--accent); margin-bottom: 8px; }
+    .feature-card p { color: var(--text-muted); font-size: 0.95rem; }
+    section { max-width: 800px; margin: 0 auto; padding: 48px 24px; }
+    section h2 { font-size: 1.75rem; font-weight: 700; color: var(--accent); margin-bottom: 20px; text-align: center; }
+    section p { color: var(--text-muted); text-align: center; }
+    footer { border-top: 1px solid var(--surface2); padding: 32px 24px; text-align: center; color: var(--text-muted); font-size: 0.875rem; }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>&#9875; Seylo</h1>
+    <p class="tagline">A modern maritime logbook for sailors &mdash; track passages, weather, and crew with ease.</p>
+    <a class="cta" href="https://play.google.com/store/apps/details?id=com.seylo.logbook_app" target="_blank" rel="noopener noreferrer">Get it on Google Play</a>
+  </header>
+  <div class="features">
+    <div class="feature-card"><div class="icon">&#128214;</div><h3>Digital Logbook</h3><p>Record every watch entry with position, heading, speed, barometer, and crew notes &mdash; just like a traditional paper logbook, but always on you.</p></div>
+    <div class="feature-card"><div class="icon">&#127780;&#65039;</div><h3>Live METAR Weather</h3><p>Automatically fetches the nearest METAR report based on your GPS position so you always have current met data at a glance.</p></div>
+    <div class="feature-card"><div class="icon">&#128260;</div><h3>Offline-First Sync</h3><p>Works completely offline. All data is stored locally on device and synced to the cloud whenever a connection is available.</p></div>
+    <div class="feature-card"><div class="icon">&#128196;</div><h3>PDF Export</h3><p>Generate a clean, printable PDF of any voyage log to share with harbour masters, authorities, or your own records.</p></div>
+    <div class="feature-card"><div class="icon">&#9200;</div><h3>Watch Timer</h3><p>Set automatic hourly log reminders so nothing gets missed during long offshore passages.</p></div>
+    <div class="feature-card"><div class="icon">&#127769;</div><h3>Dark Mode</h3><p>Designed for low-light conditions with a deep navy dark theme &mdash; perfect for night watches.</p></div>
+  </div>
+  <section>
+    <h2>Simple. Reliable. Nautical.</h2>
+    <p>Seylo is built for sailors who want a no-fuss digital logbook that works at sea, in port, and everywhere in between.</p>
+  </section>
+  <footer>
+    <p>&copy; 2026 Seylo. All rights reserved.</p>
+    <p style="margin-top:8px;"><a href="privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="mailto:contact@seylo.app">Contact</a></p>
+  </footer>
+</body>
+</html>
